@@ -2,7 +2,8 @@
 import scrapy
 from scrapy_splash import SplashRequest
 
-# assert(splash:runjs('document.querySelector("#id a").click()'))
+# This is the splash script -->>
+
 script = '''
 function main(splash, args)
     assert(splash:go(args.url))
@@ -16,7 +17,7 @@ end
 
 
 class CompaniesSpider(scrapy.Spider):
-    name = 'companies'
+    name = 'events'
     allowed_domains = ['checkpointspot.asia']
 
     def start_requests(self):
